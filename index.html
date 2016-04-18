@@ -8,7 +8,7 @@
 
 <body>
   <header class="main-header">
-    <div class="container clearfix">
+    <div class="container">
       <nav class="top-menu">
         <ul>
           <li>
@@ -31,11 +31,11 @@
     </div>
   </header>
 
-  <main class="container clearfix">
-    <div class="welcome">
+  <main class="container">
+    <div class="index-welcome">
       <img src="img/welcome.jpg" alt="Welcome" width="1200px" height="510px">
     </div>
-    <div class="lead">
+    <div class="index-lead">
       <p>Седона - небольшой городок в Аризоне,
         <br> заслуживающий большего</p>
     </div>
@@ -116,6 +116,10 @@
           <input type="date" name="date-in" value="24.04.2016" id="date-in" placeholder="24 апреля 2016">
           <label for="date-out">Дата выезда:</label>
           <input type="date" name="date-out" value="4 июля 2016" id="date-out">
+          <label for="adults">Взрослые:</label>
+          <input type="number" step="1" name="adults" value="2" id="adults">
+          <label for="kids">Дети:</label>
+          <input type="number" step="1" name="kids" value="0" id="kids">
           <br>
 
           <button class="btn" type="submit">Найти</button>
@@ -123,18 +127,29 @@
       </div>
 
       <div class="map">
-
+        <img src="img/map.jpg" alt="Карта" />
       </div>
-
-
-
 
     </section>
   </main>
 
-  <footer>
-    
+  <footer class="main-footer">
+    <div class="container">
+      <section class="footer-tag">
+        <a href="#">#visitsedona</a>
+      </section>
+      <section class="footer-social">
+        <a class="social-btn social-btn-twitter" href="#">Твиттер</a>
+        <a class="social-btn social-btn-fb" href="#">Фейсбук</a>
+        <a class="social-btn social-btn-youtube" href="#">Youtube</a>
+      </section>
+      </section>
+      <section class="footer-copyright">
+        <a href="http://www.htmlacademy.ru"><img src="img\htmlacademy.jpg" alt="website by html academy" /></a>
+      </section>
+    </div>
   </footer>
+
   <p>Репозиторий создан для обучения на интенсивном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/htmlcss">Базовый HTML и CSS</a>».</p>
 
 </body>
