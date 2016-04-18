@@ -114,14 +114,21 @@
         <form action="https://echo.htmlacademy.ru" method="post">
           <label for="date-in">Дата заезда:</label>
           <input type="date" name="date-in" value="24.04.2016" id="date-in" placeholder="24 апреля 2016">
+          <span id="ico-data-in" class="select-date btn"><img src="img\ico-date.jpg" alt="" /></span>
+          <br>
           <label for="date-out">Дата выезда:</label>
           <input type="date" name="date-out" value="4 июля 2016" id="date-out">
-          <label for="adults">Взрослые:</label>
-          <input type="number" step="1" name="adults" value="2" id="adults">
-          <label for="kids">Дети:</label>
-          <input type="number" step="1" name="kids" value="0" id="kids">
+          <span id="ico-data-out" class="select-date btn"><img src="img\ico-date.jpg" alt="" /></span>
           <br>
-
+          <label for="adults">Взрослые:</label>
+          <span class="qty-minus btn">-</span>
+          <input id="adults" type="text" name="adults" value="2" size="3">
+          <span class="qty-plus btn">+</span>
+          <label for="kids">Дети:</label>
+          <span class="qty-minus btn">-</span>
+          <input id="kids" type="text" name="kids" value="0" size="3">
+          <span class="qty-plus btn">+</span>
+          <br>
           <button class="btn" type="submit">Найти</button>
         </form>
       </div>
@@ -145,7 +152,10 @@
       </section>
       </section>
       <section class="footer-copyright">
-        <a href="http://www.htmlacademy.ru"><img src="img\htmlacademy.jpg" alt="website by html academy" /></a>
+        Website by
+        <a href="http://www.htmlacademy.ru"><img src="img\a.jpg" alt="A" /></a>
+        for
+        <a href="http://www.htmlacademy.ru"><img src="img\htmlacademy.jpg" alt="html academy" /></a>
       </section>
     </div>
   </footer>
