@@ -1,0 +1,20 @@
+.sprite-htmlacademy {
+  background-image: url("../img/html-academy-sprite.png");
+  background-repeat: no-repeat;
+  display: block;
+  width: 113px;
+  height: 39px;
+  background-position: -5px -5px;
+}
+
+.sprite-htmlacademy:hover {
+  width: 113px;
+  height: 39px;
+  background-position: -5px -54px;
+}
+
+.sprite-htmlacademy:active {
+  width: 113px;
+  height: 39px;
+  background-position: -5px -103px;
+}
