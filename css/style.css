@@ -1,0 +1,51 @@
+body {
+  font-family: "PTSans Regular", Arial, sans-serif;
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: normal;
+  color: #333333;
+}
+
+h1 {
+  font-family: "PTSans Bold", Arial, sans-serif;
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: bold;
+  color: #000000;
+}
+
+h2 {
+  font-family: "PTSans Bold", Arial, sans-serif;
+  font-size: 21px;
+  line-height: 21px;
+  font-weight: bold;
+  color: #000000;
+}
+
+.item-left,
+.item-left h2,
+.item-right,
+.item-right h2 {
+  color: white;
+}
+
+.sprite-htmlacademy {
+  background-image: url("../img/html-academy-sprite.png");
+  background-repeat: no-repeat;
+  display: block;
+  width: 113px;
+  height: 39px;
+  background-position: -5px -5px;
+}
+
+.sprite-htmlacademy:hover {
+  width: 113px;
+  height: 39px;
+  background-position: -5px -54px;
+}
+
+.sprite-htmlacademy:active {
+  width: 113px;
+  height: 39px;
+  background-position: -5px -103px;
+}
