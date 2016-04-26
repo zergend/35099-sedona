@@ -5,6 +5,7 @@ body {
   font-weight: normal;
   color: #333333;
   background-color: #f2f2f2;
+  text-align: center;
 }
 
 h1,
@@ -68,7 +69,6 @@ li.top-menu-right {
 .index-welcome {
   height: 510px;
   background: #dceaf3 url(../img/background-photo.jpg) no-repeat 100% 50%;
-  text-align: center;
 }
 
 .img-welcome {
@@ -78,22 +78,20 @@ li.top-menu-right {
   height: 352px;
 }
 
-.index-welcome::after{
-  background: url(../img/mask.png) no-repeat 100% 57px;
+div.index-welcome:after {
+  background: url(../img/mask.png) no-repeat 50% 50%;
 }
 
 .index-lead {
-  width: 55px;
+
 }
 
 /**** спрайт в футере ****/
 .sprite-htmlacademy {
-  background-image: url("../img/html-academy-sprite.png");
-  background-repeat: no-repeat;
   display: block;
   width: 113px;
   height: 39px;
-  background-position: -5px -5px;
+  background: url("../img/html-academy-sprite.png") no-repeat -5px -5px;
 }
 
 .sprite-htmlacademy:hover {
