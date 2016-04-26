@@ -1,25 +1,25 @@
 body {
-  font-family: "PTSans Regular", Arial, sans-serif;
+  font-family: font-family: 'PT Sans', Arial, sans-serif;
   font-size: 14px;
   line-height: 21px;
   font-weight: normal;
   color: #333333;
+  background-color: #f2f2f2;
+}
+
+h1,
+h2 {
+  font-size: 21px;
+  font-weight: bold;
+  color: #000000;
 }
 
 h1 {
-  font-family: "PTSans Bold", Arial, sans-serif;
-  font-size: 21px;
   line-height: 26px;
-  font-weight: bold;
-  color: #000000;
 }
 
 h2 {
-  font-family: "PTSans Bold", Arial, sans-serif;
-  font-size: 21px;
   line-height: 21px;
-  font-weight: bold;
-  color: #000000;
 }
 
 .item-left,
@@ -29,6 +29,64 @@ h2 {
   color: white;
 }
 
+header,
+main,
+footer {
+  min-width: 768px;
+  max-width: 1200px;
+  background-color: #fff;
+}
+
+.container {
+  margin: 0 auto;
+}
+
+.main-header {
+  min-height: 56px;
+}
+
+.top-menu {
+  margin: 0 6%;
+}
+
+.top-menu li {
+  display: block;
+  width: 20%;
+}
+
+li.top-menu-left {
+  float: left;
+  text-align: left;
+}
+
+li.top-menu-right {
+  float: right;
+  text-align: right;
+}
+
+
+.index-welcome {
+  height: 510px;
+  background: #dceaf3 url(../img/background-photo.jpg) no-repeat 100% 50%;
+  text-align: center;
+}
+
+.img-welcome {
+  display: inline-block;
+  vertical-align: middle;
+  width: 458px;
+  height: 352px;
+}
+
+.index-welcome::after{
+  background: url(../img/mask.png) no-repeat 100% 57px;
+}
+
+.index-lead {
+  width: 55px;
+}
+
+/**** спрайт в футере ****/
 .sprite-htmlacademy {
   background-image: url("../img/html-academy-sprite.png");
   background-repeat: no-repeat;
@@ -39,13 +97,9 @@ h2 {
 }
 
 .sprite-htmlacademy:hover {
-  width: 113px;
-  height: 39px;
   background-position: -5px -54px;
 }
 
 .sprite-htmlacademy:active {
-  width: 113px;
-  height: 39px;
   background-position: -5px -103px;
 }
