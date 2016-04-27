@@ -3,16 +3,27 @@ body {
   font-size: 14px;
   line-height: 21px;
   font-weight: normal;
-  color: #333333;
+  text-transform: uppercase;
+  color: #333;
   background-color: #f2f2f2;
   text-align: center;
+}
+
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+h1, h2, h3, p {
+  margin: 0;
 }
 
 h1,
 h2 {
   font-size: 21px;
   font-weight: bold;
-  color: #000000;
+  color: #000;
 }
 
 h1 {
@@ -21,6 +32,11 @@ h1 {
 
 h2 {
   line-height: 21px;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
 }
 
 .item-left,
@@ -33,26 +49,57 @@ h2 {
 header,
 main,
 footer {
-  min-width: 768px;
+  min-width: 768px; /* ? при уменьшении размеров браузера ширина не уменьшается до 768*/
   max-width: 1200px;
   background-color: #fff;
 }
+
 
 .container {
   margin: 0 auto;
 }
 
 .main-header {
-  min-height: 56px;
+  height: 56px;
 }
 
 .top-menu {
-  margin: 0 6%;
+  /* margin: 0 6%; */
+  padding: 0 6%;
+  padding-top: 20px;
+}
+
+.logo {
+  margin-top: -20px;
+}
+
+.top-menu ul {
+  margin: 0;
+  padding: 0;
+  /* т.к. из-за этого:
+
+  user agent stylesheet:
+
+  ul, menu, dir {
+    display: block;
+    list-style-type: disc;
+    -webkit-margin-before: 1em;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    -webkit-padding-start: 40px;
+    }
+
+  были лишние внешние и внутренние отступы!
+  */
+  list-style: none;
 }
 
 .top-menu li {
-  display: block;
+  display: inline-block;
+  margin: auto 0;
   width: 20%;
+  font-weight: bold;
 }
 
 li.top-menu-left {
@@ -67,24 +114,55 @@ li.top-menu-right {
 
 
 .index-welcome {
-  height: 510px;
-  background: #dceaf3 url(../img/background-photo.jpg) no-repeat 100% 50%;
+  height: 512px;
+  background:  #dceaf3 url(../img/background-photo.jpg) no-repeat 0% -55px;
 }
 
 .img-welcome {
   display: inline-block;
-  vertical-align: middle;
+  /* vertical-align: middle; */
   width: 458px;
   height: 352px;
+  margin-top: 76px;
 }
 
-div.index-welcome:after {
-  background: url(../img/mask.png) no-repeat 50% 50%;
+.img-welcome-mask {
+  margin-bottom: 0;
+  /* width: 100%;
+  background: url(../img/mask.png) no-repeat 0% 0%; */
+
 }
 
 .index-lead {
-
+  /* height: 216px; */
+  padding-top: 57px;
+  padding-bottom: 51px;
+  /* для наглядности, потом убрать */
+  background-color: #e88;
 }
+
+.index-lead h1 {
+  margin-bottom: 30px;
+}
+
+.index-lead p {
+  font-size: 14px;
+  line-height: 26px;
+}
+
+
+.item-left {
+  float: left;
+  width: 33%;
+  background-color: #81b3d2;
+}
+
+.image-right {
+  float: right;
+  background: #ccc url(../img/features-img-right.jpg) no-repeat 100% 50%;
+}
+
+
 
 /**** спрайт в футере ****/
 .sprite-htmlacademy {
