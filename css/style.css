@@ -19,8 +19,7 @@ h1, h2, h3, p {
   margin: 0;
 }
 
-h1,
-h2 {
+h1, h2 {
   font-size: 21px;
   font-weight: bold;
   color: #000;
@@ -39,21 +38,16 @@ a {
   color: #000;
 }
 
-.item-left,
-.item-left h2,
-.item-right,
-.item-right h2 {
+.item-left, .item-left h2, .item-right, .item-right h2 {
   color: white;
 }
 
-header,
-main,
-footer {
-  min-width: 768px; /* ? при уменьшении размеров браузера ширина не уменьшается до 768*/
+header, main, footer {
+  min-width: 768px;
+  /* ? при уменьшении размеров браузера ширина не уменьшается до 768*/
   max-width: 1200px;
   background-color: #fff;
 }
-
 
 .container {
   margin: 0 auto;
@@ -112,10 +106,9 @@ li.top-menu-right {
   text-align: right;
 }
 
-
 .index-welcome {
   height: 512px;
-  background:  #dceaf3 url(../img/background-photo.jpg) no-repeat 0% -55px;
+  background: #dceaf3 url(../img/background-photo.jpg) no-repeat 0% -55px;
 }
 
 .img-welcome {
@@ -130,7 +123,6 @@ li.top-menu-right {
   margin-bottom: 0;
   /* width: 100%;
   background: url(../img/mask.png) no-repeat 0% 0%; */
-
 }
 
 .index-lead {
@@ -150,21 +142,26 @@ li.top-menu-right {
   line-height: 26px;
 }
 
-
 .item-left {
   float: left;
   width: 33%;
   background-color: #81b3d2;
 }
 
+.features-item {
+  min-width: 768px;
+  max-width: 1200px;
+}
+
 .image-right {
   float: right;
-  background: #ccc url(../img/features-img-right.jpg) no-repeat 100% 50%;
+  width: 67%;
+  background: url("../img/features-img-right.jpg") no-repeat 100% 50%;
 }
 
 
-
 /**** спрайт в футере ****/
+
 .sprite-htmlacademy {
   display: block;
   width: 113px;
