@@ -19,7 +19,7 @@ h1,
 h2,
 h3,
 p {
-  margin: 0;
+  /* margin: 0; */
 }
 
 h1,
@@ -37,7 +37,7 @@ h2 {
   line-height: 21px;
 }
 
-a {
+.top-menu a {
   text-decoration: none;
   color: #000;
 }
@@ -63,7 +63,7 @@ main {
 }
 
 .main-header {
-  height: 56px;
+  min-height: 56px;
 }
 
 .top-menu {
@@ -71,28 +71,18 @@ main {
 }
 
 .logo {
-  margin-top: -20px;
+  position: fixed;
+  top: 0;
+  left: 50%;
+  margin-left: -69px;
+  /* margin-top: -20px; */
 }
 
-.top-menu ul {
+.top-menu ul,
+.filters-form ul {
   margin: 0;
   padding: 0;
-  /* т.к. из-за этого:
 
-  user agent stylesheet:
-
-  ul, menu, dir {
-    display: block;
-    list-style-type: disc;
-    -webkit-margin-before: 1em;
-    -webkit-margin-after: 1em;
-    -webkit-margin-start: 0px;
-    -webkit-margin-end: 0px;
-    -webkit-padding-start: 40px;
-    }
-
-  были лишние внешние и внутренние отступы!
-  */
   list-style: none;
 }
 
@@ -116,6 +106,12 @@ li.top-menu-right {
 .index-welcome {
   height: 512px;
   background: #dceaf3 url("../img/background-photo.jpg") no-repeat 0 -55px;
+  background-size: cover;
+}
+
+.index-welcome::after {
+  background: transparent url("../img/mask.png") no-repeat 0% 0%;
+  background-size: cover;
 }
 
 .img-welcome {
@@ -140,24 +136,25 @@ li.top-menu-right {
 }
 
 .index-lead h1 {
-  margin-bottom: 30px;
+  margin: 0;
+  padding-bottom: 30px;
 }
 
 .index-lead p {
+  margin: 0;
   font-size: 14px;
   line-height: 26px;
 }
 
-.features-item {
-  /*  min-width: 768px;
-  max-width: 1200px;
-  margin: 0 auto; */
+.features-item h2,
+.features-item p {
+  margin: 0;
 }
 
 .features-image,
 .item-description {
   box-sizing: border-box;
-  height: 256px;
+  min-height: 256px;
 }
 
 .item-description {
@@ -173,13 +170,13 @@ li.top-menu-right {
 .image-right {
   float: right;
   width: 66%;
-  /* height: 256px; */
   background: url("../img/features-img-right.jpg") no-repeat 100% 50%;
+  background-size: cover;
 }
 
 .item-advice {
   box-sizing: border-box;
-  height: 330px;
+  min-height: 330px;
   float: left;
   width: 33.33%;
   padding-top: 60px;
@@ -195,6 +192,7 @@ li.top-menu-right {
   float: left;
   width: 66%;
   background: url("../img/features-img-left.jpg") no-repeat 0 0;
+  background-size: cover;
 }
 
 .item-right {
@@ -205,7 +203,7 @@ li.top-menu-right {
 
 .feature-bg-gray .item-description {
   box-sizing: border-box;
-  height: 256px;
+  min-height: 256px;
   float: left;
   width: 33.33%;
   background-color: #eee;
@@ -216,20 +214,23 @@ li.top-menu-right {
   width: 33.34%;
 }
 
-.search-form-item {
-  box-sizing: border-box;
-  height: 291px;
-  background-color: #aae;
-  /* для наглядности, убрать */
-}
-
 form.hidden {
   display: none;
 }
 
+.search-form-item p {
+  margin: 0;
+}
+
+.search-form-item a {
+  text-decoration: none;
+  color: #fff;
+}
+
+
 .search-form-item {
   box-sizing: border-box;
-  height: 291px;
+  min-height: 291px;
   background-color: #aae;
   /* для наглядности, убрать */
 }
@@ -244,8 +245,17 @@ form.hidden {
 /* === hotels === */
 .filters-form {
   box-sizing: border-box;
-  height: 217px;
+  min-height: 217px;
+  padding: 0 6%;
+  text-align: left;
   background: #dceaf3 url("../img/filter-background.jpg") no-repeat 0% 0%;
+}
+
+.filter-item p,
+.filter-range p {
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: bold;
 }
 
 .filter-item {
@@ -258,31 +268,96 @@ form.hidden {
   width: 30%;
 }
 
+.results-sort {
+  padding: 30px 6%;
+  border-bottom: 1px solid #f2f2f2;
+  text-align: left;
+}
+
+.results-sort-variants {
+  float: left;
+  width: 80%;
+}
+
+.sorting-up-down {
+  float: right;
+  width: 8%;
+}
+
+.result-count {
+  font-size: 21px;
+  font-weight: bold;
+  line-height: 26px;
+  margin-right: 45px;
+}
+
+.sorting {
+  margin-right: 40px; 
+}
+
+.sorting-variant {
+  margin-right: 30px;
+}
+
+.sorting,
+a.sorting {
+  font-size: 12px;
+  font-weight: normal;
+  line-height: 18px;
+}
+
+a.sorting-active {
+  color: #81b3d2;
+}
+
+.result-hotel-item {
+  padding: 30px 6%;
+  border-bottom: 1px solid #f2f2f2;
+}
+
 .hotel-photo {
   float: left;
   width: 135px;
+/* для наглядности, убрать */
   outline: 1px solid #777;
-  /* для наглядности, убрать */
 }
 
 .hotel-description {
   float: left;
   width: 50%;
-  outline: 1px solid #777;
   /* для наглядности, убрать */
+  outline: 1px solid #777;
+}
+
+.hotel-name,
+.hotel-type {
+  text-align: left;
 }
 
 .result-rating {
   float: right;
   width: 120px;
-  outline: 1px solid #777;
   /* для наглядности, убрать */
+  outline: 1px solid #777;
+}
+
+.rating-stars span {
+  display: inline-block;
+  text-align: right;
+  width: 14px;
+  height: 13px;
+  background: url("../img/star.png") no-repeat;
 }
 
 /*====== ФУТЕР =====*/
+.footer-item a {
+  text-decoration: none;
+  color: #000;
+}
+
 .footer-item {
   box-sizing: border-box;
-  height: 120px;
+  min-height: 120px;
   float: left;
   width: 33.33%;
   outline: 1px solid #777;
@@ -293,9 +368,27 @@ form.hidden {
   float: right;
   width: 33.34%;
 }
+
+.footer-tag {
+  font-size: 21px;
+  font-weight: bold;
+  line-height: 26px;
+  padding-top: 48px;
+}
+
+.footer-social {
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 26px;
+}
+
+.footer-copyright {
+  padding-top: 41px;
+}
 /**** спрайт в футере ****/
 .sprite-htmlacademy {
-  display: block;
+  display: inline-block;
+  vertical-align: middle;
   width: 113px;
   height: 39px;
   background: url("../img/html-academy-sprite.png") no-repeat -5px -5px;
