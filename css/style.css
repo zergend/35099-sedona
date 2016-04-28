@@ -1,5 +1,5 @@
 body {
-  font-family: font-family: 'PT Sans', Arial, sans-serif;
+  font-family:font-family: 'PT Sans', Arial, sans-serif;
   font-size: 14px;
   line-height: 21px;
   font-weight: normal;
@@ -15,11 +15,15 @@ body {
   clear: both;
 }
 
-h1, h2, h3, p {
+h1,
+h2,
+h3,
+p {
   margin: 0;
 }
 
-h1, h2 {
+h1,
+h2 {
   font-size: 21px;
   font-weight: bold;
   color: #000;
@@ -38,11 +42,16 @@ a {
   color: #000;
 }
 
-.item-left, .item-left h2, .item-right, .item-right h2 {
+.item-left,
+.item-left h2,
+.item-right,
+.item-right h2 {
   color: white;
 }
 
-header, main, footer {
+footer,
+header,
+main {
   min-width: 768px;
   /* ? при уменьшении размеров браузера ширина не уменьшается до 768*/
   max-width: 1200px;
@@ -58,9 +67,7 @@ header, main, footer {
 }
 
 .top-menu {
-  /* margin: 0 6%; */
-  padding: 0 6%;
-  padding-top: 20px;
+  padding: 20px 6% 0;
 }
 
 .logo {
@@ -108,7 +115,7 @@ li.top-menu-right {
 
 .index-welcome {
   height: 512px;
-  background: #dceaf3 url(../img/background-photo.jpg) no-repeat 0% -55px;
+  background: #dceaf3 url("../img/background-photo.jpg") no-repeat 0 -55px;
 }
 
 .img-welcome {
@@ -129,8 +136,7 @@ li.top-menu-right {
   /* height: 216px; */
   padding-top: 57px;
   padding-bottom: 51px;
-  /* для наглядности, потом убрать */
-  background-color: #e88;
+  background-color: #e88;  /* для наглядности, потом убрать */
 }
 
 .index-lead h1 {
@@ -142,26 +148,152 @@ li.top-menu-right {
   line-height: 26px;
 }
 
-.item-left {
-  float: left;
-  width: 33%;
-  background-color: #81b3d2;
+.features-item {
+  /*  min-width: 768px;
+  max-width: 1200px;
+  margin: 0 auto; */
 }
 
-.features-item {
-  min-width: 768px;
-  max-width: 1200px;
+.features-image,
+.item-description {
+  box-sizing: border-box;
+  height: 256px;
+}
+
+.item-description {
+  padding-top: 46px;
+}
+
+.item-left {
+  float: left;
+  width: 34%;
+  background-color: #81b3d2;
 }
 
 .image-right {
   float: right;
-  width: 67%;
+  width: 66%;
+  /* height: 256px; */
   background: url("../img/features-img-right.jpg") no-repeat 100% 50%;
 }
 
+.item-advice {
+  box-sizing: border-box;
+  height: 330px;
+  float: left;
+  width: 33.33%;
+  padding-top: 60px;
+  background-color: #fdd;
+}
 
+.item-advice:nth-child(3) {
+  float: right;
+  width: 33.34%;
+}
+
+.image-left {
+  float: left;
+  width: 66%;
+  background: url("../img/features-img-left.jpg") no-repeat 0 0;
+}
+
+.item-right {
+  float: right;
+  width: 34%;
+  background-color: #81b3d2;
+}
+
+.feature-bg-gray .item-description {
+  box-sizing: border-box;
+  height: 256px;
+  float: left;
+  width: 33.33%;
+  background-color: #eee;
+}
+
+.feature-bg-gray .item-description:nth-child(3) {
+  float: right;
+  width: 33.34%;
+}
+
+.search-form-item {
+  box-sizing: border-box;
+  height: 291px;
+  background-color: #aae;
+  /* для наглядности, убрать */
+}
+
+form.hidden {
+  display: none;
+}
+
+.search-form-item {
+  box-sizing: border-box;
+  height: 291px;
+  background-color: #aae;
+  /* для наглядности, убрать */
+}
+
+.map {
+  box-sizing: border-box;
+  height: 473px;
+  background-color: #cbdda9;
+  /* для наглядности, убрать */
+}
+
+/* === hotels === */
+.filters-form {
+  box-sizing: border-box;
+  height: 217px;
+  background: #dceaf3 url("../img/filter-background.jpg") no-repeat 0% 0%;
+}
+
+.filter-item {
+  float: left;
+  width: 210px;
+}
+
+.filter-range {
+  float: right;
+  width: 30%;
+}
+
+.hotel-photo {
+  float: left;
+  width: 135px;
+  outline: 1px solid #777;
+  /* для наглядности, убрать */
+}
+
+.hotel-description {
+  float: left;
+  width: 50%;
+  outline: 1px solid #777;
+  /* для наглядности, убрать */
+}
+
+.result-rating {
+  float: right;
+  width: 120px;
+  outline: 1px solid #777;
+  /* для наглядности, убрать */
+}
+
+/*====== ФУТЕР =====*/
+.footer-item {
+  box-sizing: border-box;
+  height: 120px;
+  float: left;
+  width: 33.33%;
+  outline: 1px solid #777;
+  /* для наглядности, убрать */
+}
+
+.footer-item:last-of-type {
+  float: right;
+  width: 33.34%;
+}
 /**** спрайт в футере ****/
-
 .sprite-htmlacademy {
   display: block;
   width: 113px;
