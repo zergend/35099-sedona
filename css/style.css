@@ -64,6 +64,7 @@ main {
 }
 
 .main-header {
+  position: relative;
   min-height: 56px;
 }
 
@@ -72,11 +73,10 @@ main {
 }
 
 .logo {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 50%;
   margin-left: -69px;
-  /* margin-top: -20px; */
 }
 
 .top-menu ul,
