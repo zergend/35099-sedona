@@ -52,6 +52,7 @@ h2 {
 footer,
 header,
 main {
+  box-sizing: border-box;
   min-width: 768px;
   /* ? при уменьшении размеров браузера ширина не уменьшается до 768*/
   max-width: 1200px;
@@ -163,13 +164,13 @@ li.top-menu-right {
 
 .item-left {
   float: left;
-  width: 34%;
+  width: 33%;
   background-color: #81b3d2;
 }
 
 .image-right {
   float: right;
-  width: 66%;
+  width: 67%;
   background: url("../img/features-img-right.jpg") no-repeat 100% 50%;
   background-size: cover;
 }
@@ -190,14 +191,14 @@ li.top-menu-right {
 
 .image-left {
   float: left;
-  width: 66%;
+  width: 67%;
   background: url("../img/features-img-left.jpg") no-repeat 0 0;
   background-size: cover;
 }
 
 .item-right {
   float: right;
-  width: 34%;
+  width: 33%;
   background-color: #81b3d2;
 }
 
@@ -292,7 +293,7 @@ form.hidden {
 }
 
 .sorting {
-  margin-right: 40px; 
+  margin-right: 40px;
 }
 
 .sorting-variant {
