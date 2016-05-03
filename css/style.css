@@ -19,7 +19,7 @@ h1,
 h2,
 h3,
 p {
-  /* margin: 0; */
+  margin: 0;
 }
 
 h1,
@@ -61,6 +61,40 @@ main {
 .container {
   margin: 0 auto;
 }
+
+/** Кнопки **/
+.btn {
+  display: inline-block;
+  color: $fff;
+}
+
+.brown-btn {
+  background-color: #766357;
+}
+
+.brown-btn:hover {
+  background-color: #604e43;
+}
+
+.brown-btn:active {
+  color: #857871;
+  background-color: #503e33;
+}
+
+.blue-btn {
+  background-color: #81b3d2;
+}
+
+.blue-btn:hover {
+  background-color: #669ec0;
+}
+
+.blue-btn:active {
+  color: #88b6d1;
+  background-color: #5496bd;
+}
+
+/* Конец Кнопки */
 
 .main-header {
   position: relative;
@@ -276,22 +310,8 @@ form.hidden {
   color: #333;
 }
 
-.btn {
-  display: inline-block;
+.search-form .btn {
   padding: 10px 45px;
-}
-
-.brown-btn {
-  background-color: #766357;
-}
-
-.brown-btn:hover {
-  background-color: #604e43;
-}
-
-.brown-btn:active {
-  color: #857871;
-  background-color: #503e33;
 }
 
 .search-form-item {
@@ -325,8 +345,10 @@ form.hidden {
   box-sizing: border-box;
   min-height: 217px;
   padding: 0 6%;
+  padding-top: 27px;
   text-align: left;
   background: #dceaf3 url("../img/filter-background.jpg") no-repeat 0% 0%;
+  color: #fff;
 }
 
 .filter-item p,
@@ -338,6 +360,7 @@ form.hidden {
 
 .filter-item {
   float: left;
+  margin-right: 45px;
   width: 210px;
 }
 
@@ -389,22 +412,38 @@ a.sorting-active {
 }
 
 .result-hotel-item {
-  padding: 30px 6%;
+  box-sizing: border-box;
+  min-height: 150px;
+  padding: 0px 6%;
+  padding-top: 30px;
+  text-align: left;
   border-bottom: 1px solid #f2f2f2;
 }
+
+.result-hotel-item a {
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.result-hotel-item .btn {
+  padding: 3px 17px;
+}
+
+/* .result-hotel-item a.brown-btn {
+  background-color: #766357;
+} */
 
 .hotel-photo {
   float: left;
   width: 135px;
-/* для наглядности, убрать */
-  outline: 1px solid #777;
+  height: 90px;
+  margin-right: 30px;
 }
 
 .hotel-description {
   float: left;
   width: 50%;
-  /* для наглядности, убрать */
-  outline: 1px solid #777;
 }
 
 .hotel-name,
@@ -412,11 +451,21 @@ a.sorting-active {
   text-align: left;
 }
 
+.hotel-name {
+  font-size: 21px;
+  font-weight: bold;
+  line-height: 26px;
+  margin-top: -5px;
+  padding-bottom: 8px;
+}
+
+.hotel-description p {
+  padding-bottom: 13px;
+}
+
 .result-rating {
   float: right;
   width: 120px;
-  /* для наглядности, убрать */
-  outline: 1px solid #777;
 }
 
 .rating-stars span {
@@ -424,6 +473,7 @@ a.sorting-active {
   text-align: right;
   width: 14px;
   height: 13px;
+/* убрать */
   background: url("../img/star.png") no-repeat;
 }
 
