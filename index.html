@@ -50,7 +50,7 @@
             Настоящий<br>
             городок
           </h2>
-          <p>№1</p>
+          <p>— №1 —</p>
           <p>Седона - не аттракцион для туристов, там течет своя жизнь</p>
         </div>
         <div class="features-image image-right"></div>
@@ -80,7 +80,7 @@
             Там есть<br>
             Мост дьявола
           </h2>
-          <p>№2</p>
+          <p>— №2 —</p>
           <p>Да, по нему можно пройти! Если конечно вы осмелитесь</p>
         </div>
         <div class="features-image image-left"></div>
@@ -92,7 +92,7 @@
             Небольшая<br>
             площадь
           </h2>
-          <p>№3</p>
+          <p>— №3 —</p>
           <p>Все достопримечательности находятся очень близко</p>
         </div>
         <div class="item-description">
@@ -100,7 +100,7 @@
             Красивая<br>
             дорога
           </h2>
-          <p>№4</p>
+          <p>— №4 —</p>
           <p>Ехать в седону из Лас-Вегаса совсем не скучно!</p>
         </div>
         <div class="item-description">
@@ -108,7 +108,7 @@
             Мало<br>
             Туристов
           </h2>
-          <p>№5</p>
+          <p>— №5 —</p>
           <p>Большинство едет в Гранд Каньон и толпится там</p>
         </div>
       </div>
@@ -121,8 +121,8 @@
         <br> и мы покажем вам лучшие предложения гостиниц в Седоне
       </p>
       <div class="search-form">
-        <a href="#" class="btn brown-btn">Поиск гостиницы в седоне</a>
-        <form class="hidden modal-content" action="https://echo.htmlacademy.ru" method="post">
+        <a href="#" class="btn brown-btn search-form-open">Поиск гостиницы в седоне</a>
+        <form class="modal-content" action="https://echo.htmlacademy.ru" method="post">
           <div class="form-calendar">
             <label for="date-in">Дата заезда:</label>
             <input type="date" name="date-in" value="2016-04-24" id="date-in">
@@ -152,7 +152,8 @@
 
 
     <div class="map">
-
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d997423.9916098118!2d-112.13330766600185!3d34.798643323020286!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2z0KHQtdC00L7QvdCwLCDQkNGA0LjQt9C-0L3QsCA4NjMzNiwg0KHQqNCQ!5e0!3m2!1sru!2sru!4v1462479807799"
+          frameborder="0" width="100%" height="100%" style="border:0" allowfullscreen></iframe>
     </div>
 
   </main>
@@ -174,6 +175,15 @@
     </section>
   </footer>
 
+  <script>
+    var link = document.querySelector(".search-form-open");
+    var popup = document.querySelector(".modal-content");
+
+    link.addEventListener("click", function(event) {
+      event.preventDefault();
+      popup.classList.add("modal-content-show");
+    });
+  </script>
 </body>
 
 </html>

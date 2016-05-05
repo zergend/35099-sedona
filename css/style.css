@@ -10,7 +10,10 @@ body {
   font-weight: normal;
   line-height: 21px;
 }
+
+
 /*==== -= НАЧАЛО =- Иконочный шрифт ====*/
+
 @font-face {
   font-family: 'symbols-sedona';
   font-weight: normal;
@@ -19,13 +22,12 @@ body {
   src: url('../fonts/symbols-sedona.woff') format('woff'), url('../fonts/symbols-sedona.woff2') format('woff2');
 }
 
-[class*=' icon-']::before,
-[class^='icon-']::before {
+[class*=' icon-']::before, [class^='icon-']::before {
   display: inline-block;
 
   width: 1em;
-  margin-right: 0.2em;
-  margin-left: 0.2em;
+  margin-right: .2em;
+  margin-left: .2em;
 
   text-align: center;
   text-decoration: inherit;
@@ -43,47 +45,81 @@ body {
 .icon-facebook::before {
   content: '\66';
 }
+
+
 /* "f" */
+
 .icon-twitter::before {
   content: '\74';
 }
+
+
 /* "t" */
+
 .icon-up-dir::before {
   content: '\25b2';
 }
+
+
 /* "▲" */
+
 .icon-down-dir::before {
   content: '\25bc';
 }
+
+
 /* "▼" */
+
 .icon-star::before {
   content: '\2605';
 }
+
+
 /* "★" */
+
 .icon-check-off::before {
   content: '\2610';
 }
+
+
 /* "☐" */
+
 .icon-check-on::before {
   content: '\2611';
 }
+
+
 /* "☑" */
+
 .icon-calendar::before {
   content: '\e800';
 }
+
+
 /* "" */
+
 .icon-plus::before {
   content: '\e801';
 }
+
+
 /* "" */
+
 .icon-minus::before {
   content: '\e802';
 }
+
+
 /* "" */
+
 .icon-youtube::before {
   content: '\f39e';
 }
+
+
 /* "" */
+
+
 /*==== -= КОНЕЦ =- Иконочный шрифт ====*/
 
 .clearfix::after {
@@ -93,15 +129,11 @@ body {
   content: '';
 }
 
-h1,
-h2,
-h3,
-p {
+h1, h2, h3, p {
   margin: 0;
 }
 
-h1,
-h2 {
+h1, h2 {
   color: #000;
 
   font-size: 21px;
@@ -127,7 +159,7 @@ h2 {
 }
 
 .top-menu a:active {
-  opacity: 0.3;
+  opacity: .3;
   color: #000;
 }
 
@@ -140,32 +172,31 @@ h2 {
 }
 
 .top-menu a.active:active {
-  opacity: 0.3;
+  opacity: .3;
   color: #766357;
 }
 
-.item-left,
-.item-left h2,
-.item-right,
-.item-right h2 {
+.item-left, .item-left h2, .item-right, .item-right h2 {
   color: white;
 }
 
-footer,
-header,
-main {
+footer, header, main {
   box-sizing: border-box;
   min-width: 768px;
   max-width: 1200px;
 
   background-color: #fff;
+  box-shadow: 5px 0 15px -5px rgba(0, 1, 1, 0.2),
+              -5px 0 15px -5px rgba(0, 1, 1, 0.2);
 }
 
 .container {
   margin: 0 auto;
 }
 
+
 /** Кнопки **/
+
 .btn {
   display: inline-block;
 
@@ -199,7 +230,10 @@ main {
   color: #88b6d1;
   background-color: #5496bd;
 }
+
+
 /* Конец Кнопки */
+
 .main-header {
   position: relative;
 
@@ -218,8 +252,7 @@ main {
   margin-left: -69px;
 }
 
-.filters-form ul,
-.top-menu ul {
+.filters-form ul, .top-menu ul {
   margin: 0;
   padding: 0;
 
@@ -290,13 +323,11 @@ li.top-menu-right {
   line-height: 26px;
 }
 
-.features-item h2,
-.features-item p {
+.features-item h2, .features-item p {
   margin: 0;
 }
 
-.features-image,
-.item-description {
+.features-image, .item-description {
   box-sizing: border-box;
   min-height: 256px;
 }
@@ -307,8 +338,7 @@ li.top-menu-right {
   padding-left: 45px;
 }
 
-.item-description h2,
-.item-description h2 + p {
+.item-description h2, .item-description h2 + p {
   padding-bottom: 23px;
 }
 
@@ -364,7 +394,7 @@ li.top-menu-right {
 
   width: 67%;
 
-  background: #ccc2c2 url('../img/features-img-left.jpg') no-repeat 100% 50%;
+  background: #ccc2c2 url("../img/features-img-left.jpg") no-repeat 100% 50%;
   background-size: cover;
 }
 
@@ -394,7 +424,9 @@ li.top-menu-right {
   width: 33.34%;
 }
 
+
 /*===== Форма поиска  =====*/
+
 .search-form-item p {
   margin: 0;
 }
@@ -450,14 +482,12 @@ li.top-menu-right {
   line-height: 26px;
 }
 
-form.hidden {
-  /* display: none; */
-}
-
 .modal-content {
   position: absolute;
   top: 291px;
   left: 50%;
+
+  display: none;
 
   width: 568px;
   height: 395px;
@@ -465,18 +495,29 @@ form.hidden {
 
   color: #fff;
   background: #faf9f8;
-  box-shadow: 0 7px 15px rgba(0, 1, 1, 0.15);
+  box-shadow: 0 7px 15px rgba(0, 1, 1, .15);
 }
 
+.modal-content-show {
+  display: block;
+}
+
+
 /*==== Карта ===*/
+
 .map {
   box-sizing: border-box;
   height: 593px;
+
+  background: #ebeee3 url("../img/map.jpg") no-repeat 50% 100%;
 }
+
 
 /* === HOTELS === */
 
+
 /*=== -= НАЧАЛО фильтр отелей =- ===*/
+
 .filters-form {
   box-sizing: border-box;
   min-height: 217px;
@@ -531,8 +572,11 @@ input[type='checkbox']:checked + label::before {
   content: '\2611';
 }
 
-.filter-item p,
-.filter-range p {
+input[type='checkbox']:disabled + label::before {
+  color: #6a6a6a;
+}
+
+.filter-item p, .filter-range p {
   font-size: 16px;
   font-weight: bold;
   line-height: 21px;
@@ -554,8 +598,13 @@ input[type='checkbox']:checked + label::before {
 
   width: 30%;
 }
+
+
 /*=== -= КОНЕЦ фильтр отелей =- ===*/
+
+
 /*=== -= НАЧАЛО фильтр цены =- ===*/
+
 .filter-range {
   /* width: 330px; */
   width: 31.25%;
@@ -607,8 +656,7 @@ input[type='checkbox']:checked + label::before {
   line-height: 33px;
 }
 
-.price-controls .max-price,
-.price-controls .min-price {
+.price-controls .max-price, .price-controls .min-price {
   /* width: 90px; */
   width: 27%;
   /* padding-left: 65px; */
@@ -697,7 +745,10 @@ input[type='checkbox']:checked + label::before {
   color: #000;
   background: #fff;
 }
+
+
 /*=== -= НАЧАЛО фильтр цены =- ===*/
+
 .results-sort {
   padding: 30px 6%;
 
@@ -735,8 +786,7 @@ input[type='checkbox']:checked + label::before {
   margin-right: 28px;
 }
 
-.sorting,
-a.sorting {
+.sorting, a.sorting {
   text-decoration: none;
 
   color: #000;
@@ -762,9 +812,7 @@ a.sorting:active {
   border-bottom: 0;
 }
 
-a.sorting-active,
-a.sorting-active:active,
-a.sorting-active:hover {
+a.sorting-active, a.sorting-active:active, a.sorting-active:hover {
   color: #81b3d2;
   border-bottom: 0;
 }
@@ -852,8 +900,7 @@ a.sorting-active:hover {
   color: rgba(0, 0, 0, .3);
 }
 
-.hotel-name,
-.hotel-type {
+.hotel-name, .hotel-type {
   text-align: left;
 }
 
@@ -944,11 +991,14 @@ a.sorting-active:hover {
   font-size: 14px;
   line-height: 27px;
 }
+
+
 /*====== ФУТЕР =====*/
+
 .main-footer {
   margin-top: -120px;
 
-  opacity: 0.9;
+  opacity: .9;
   border-color: #fefefe;
 }
 
@@ -1039,7 +1089,10 @@ a.sorting-active:hover {
 .footer-copyright span {
   margin: 0 2px;
 }
+
+
 /**** спрайт в футере ****/
+
 .sprite-htmlacademy {
   display: inline-block;
 
