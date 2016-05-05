@@ -72,24 +72,27 @@
         </div>
 
         <div class="filter-range">
-          <p>Стоимость в сутки (р):</p>
+          <div class="filter-range-title">Стоимость в сутки (р):</div>
+
+          <div class="price-controls">
+            <label class="min-price">от
+              <input type="text" name="min-price" value="0">
+            </label>
+            <label class="max-price">до
+              <input type="text" name="max-price" value="3000">
+            </label>
+          </div>
+
           <div class="range-controls">
             <div class="scale">
               <div class="bar"></div>
             </div>
-            <div class="toggle min-toggle">
-
-            </div>
-            <div class="toggle max-toggle">
-
-            </div>
+            <div class="range-toggle range-toggle-min"></div>
+            <div class="range-toggle range-toggle-max"></div>
           </div>
-          <div class="price-controls">
-            от
-            <input type="text" class="min-price" name="min-price" id="min-price" value="0"> до
-            <input type="text" class="max-price" name="max-price" id="max-price" value="3 000">
-          </div>
-          <button class="btn blue-btn" type="submit">Показать</button>
+          <button class="btn-transparent" type="submit">Показать</button>
+
+
         </div>
       </form>
     </div>
@@ -103,9 +106,9 @@
           <a class="sorting sorting-variant" href="#">по типу</a>
           <a class="sorting sorting-variant" href="#">по рейтингу</a>
         </div>
-        <div class="sorting-up-down">
-          <a class="up active" href="#"><span class="icon-up-dir"></span></a>
-          <a class="down" href="#"><span class="icon-down-dir"></span></a>
+        <div class="result-sort-up-down">
+          <a class="sort-up-down" href="#"><span class="icon-up-dir"></span></a>
+          <a class="sort-up-down" href="#"><span class="icon-down-dir active"></span></a>
         </div>
       </div>
 
