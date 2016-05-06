@@ -125,37 +125,37 @@
         <form class="modal-content" action="https://echo.htmlacademy.ru" method="post">
           <div class="form-calendar">
             <label class="form-calendar-item" for="date-in">Дата заезда:</label>
-              <input class="form-calendar-item" type="text" name="date-in" value="24 апреля 2016" id="date-in">
-              <span class="form-calendar-item icon-calendar"></span>
+            <input class="form-calendar-item" type="text" name="date-in" value="24 апреля 2016" id="date-in">
+            <span class="form-calendar-item icon-calendar"></span>
           </div>
 
           <div class="form-calendar">
             <label class="form-calendar-item" for="date-out">Дата выезда:</label>
-              <input class="form-calendar-item" type="text" name="date-out" value="4 июля 2016" id="date-out">
-              <span class="form-calendar-item icon-calendar"></span>
+            <input class="form-calendar-item" type="text" name="date-out" value="4 июля 2016" id="date-out">
+            <span class="form-calendar-item icon-calendar"></span>
           </div>
 
-          <div class="form-qty">
-            <label for="adults">Взрослые:
-              <span class="form-calendar-minus"></span>
-              <input id="adults" type="text" name="adults" value="2" size="3">
-              <span class="form-calendar-plus"></span>
-            </label>
+          <div class="form-qty form-qty-adult">
+            <label class="form-qty-item" for="adults">Взрослые:</label>
+            <span class="form-qty-item icon-minus"></span>
+            <input class="form-qty-item" id="adults" type="text" name="adults" value="2" size="2">
+            <span class="form-qty-item icon-plus"></span>
           </div>
-          <div class="form-qty">
-            <label for="adults">Дети:
-              <span class="form-calendar-minus"></span>
-              <input id="kids" type="text" name="kids" value="0" size="3">
-              <span class="form-calendar-plus"></span>
-            </label>
+
+          <div class="form-qty form-qty-child">
+            <label class="form-qty-item" for="adults">Дети:</label>
+            <span class="form-qty-item icon-minus"></span>
+            <input class="form-qty-item" id="kids" type="text" name="kids" value="0" size="2">
+            <span class="form-qty-item icon-plus"></span>
           </div>
-          <button class="btn blue-btn" type="submit">Найти</button>
+
+          <button class="btn blue-btn btn-search-hotels" type="submit">Найти</button>
         </form>
       </div>
     </div>
 
     <div class="map">
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d997423.9916098118!2d-112.13330766600185!3d34.798643323020286!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2z0KHQtdC00L7QvdCwLCDQkNGA0LjQt9C-0L3QsCA4NjMzNiwg0KHQqNCQ!5e0!3m2!1sru!2sru!4v1462479807799"
+      <iframe src="https://www.google.com/maps/embed?pb=!1m23!1m12!1m3!1d1000539.25509417!2d-112.07806899777074!3d34.54031266889378!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m8!3e6!4m0!4m5!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2z0KHQtdC00L7QvdCwIFNlZG9uYQ!3m2!1d34.8697395!2d-111.7609896!5e0!3m2!1sru!2sru!4v1462559302395"
           frameborder="0" width="100%" height="100%" style="border:0" allowfullscreen></iframe>
     </div>
 
