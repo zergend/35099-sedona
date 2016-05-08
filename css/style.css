@@ -495,6 +495,12 @@ li.top-menu-right {
   line-height: 38px;
 }
 
+.modal-content-show {
+  z-index: 100;
+
+  display: block;
+}
+
 .modal-content input[type="text"],
 .modal-content label {
   text-transform: uppercase;
@@ -504,8 +510,26 @@ li.top-menu-right {
   line-height: 38px;
 }
 
-.modal-content-show {
-  display: block;
+.modal-content input {
+  color: #000;
+  border: transparent solid 2px;
+  background-color: #f2f2f2;
+}
+
+input::-webkit-input-placeholder {
+  color:#000;
+}
+
+input::-moz-placeholder {
+  color:#000;
+}/* Firefox 19+ */
+
+input:-moz-placeholder {
+  color:#000;
+}/* Firefox 18- */
+
+input:-ms-input-placeholder {
+  color:#000;
 }
 
 /* -= форма поиска отелей на главной =- НАЧАЛО */
@@ -568,16 +592,25 @@ li.top-menu-right {
 
   border: none;
   outline: none;
-  background-color: #f2f2f2;
 }
 
 .form-calendar-item input {
-  right: 38px;
+  right: 0;
 
-  width: 308px;
+  width: 346px;
+  padding-right: 50px;
   padding-left: 12px;
 
   text-align: left;
+}
+
+.form-calendar-item input:hover {
+  background-color: #ebebeb;
+}
+
+.form-calendar-item input:focus {
+  border: #e5e5e5 solid 2px;
+  background-color: #fff;
 }
 
 .form-calendar-item button {
@@ -585,7 +618,7 @@ li.top-menu-right {
 
   width: 38px;
 
-  color: #c2c2c2;
+  background-color: transparent;
 
   font-size: 21px;
   line-height: 38px;
@@ -603,8 +636,6 @@ li.top-menu-right {
 
   width: 38px;
 
-  color: #a9a9a9;
-
   font-size: 14px;
   line-height: 38px;
 }
@@ -613,6 +644,34 @@ li.top-menu-right {
   right: 76px;
 }
 
+.icon-calendar::before {
+  color: #c2c2c2;
+  background-color: transparent;
+}
+
+.icon-minus::before,
+.icon-plus::before {
+  color: #a9a9a9;
+  background-color: transparent;
+}
+
+.icon-calendar:hover,
+.icon-minus:hover,
+.icon-plus {
+  cursor: pointer;
+}
+
+.icon-calendar:hover::before,
+.icon-minus:hover::before,
+.icon-plus:hover::before {
+  color: #000;
+}
+
+.icon-calendar:active::before,
+.icon-minus:active::before,
+.icon-plus:active::before {
+  color: #81b3d2;
+}
 
 
 .btn-search-hotels {
@@ -1095,7 +1154,6 @@ a.sorting-active, a.sorting-active:active, a.sorting-active:hover {
 
   width: 19px;
   height: 19px;
-  /* padding-left: 1px; */
 
   text-align: center;
   vertical-align: top;
@@ -1108,7 +1166,6 @@ a.sorting-active, a.sorting-active:active, a.sorting-active:hover {
 .result-rating .rating-number {
   width: 110px;
   height: 27px;
-  /* padding: 3px 0; */
 
   text-align: center;
 
