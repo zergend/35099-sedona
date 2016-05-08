@@ -450,7 +450,7 @@ li.top-menu-right {
   line-height: 24px;
 }
 
-.search-form .btn {
+.search-form-open {
   padding: 10px 45px;
 }
 
@@ -482,7 +482,7 @@ li.top-menu-right {
   height: 395px;
   margin-left: -284px;
   padding-top: 55px;
-  padding-left: 54px;
+  padding-left: 55px;
 
   text-align: left;
 
@@ -490,12 +490,15 @@ li.top-menu-right {
   background: #faf9f8;
   box-shadow: 0 7px 15px rgba(0, 1, 1, .15);
 
-  font-size: 14px;
+  font-size: 0;
   font-weight: bold;
   line-height: 38px;
 }
 
-.modal-content input[type="text"] {
+.modal-content input[type="text"],
+.modal-content label {
+  text-transform: uppercase;
+
   font-size: 14px;
   font-weight: bold;
   line-height: 38px;
@@ -505,106 +508,112 @@ li.top-menu-right {
   display: block;
 }
 
+/* -= форма поиска отелей на главной =- НАЧАЛО */
 .form-calendar-item,
 .form-qty-item {
+  position: relative;
+
   display: inline-block;
 
-  box-sizing: border-box;
-  min-height: 38px;
-  margin: 0;
-  padding-bottom: 29px;
-
-  text-align: left;
-  vertical-align: top;
-
-  font-size: 0;
-}
-
-.form-qty {
-  display: inline-block;
-
-  box-sizing: border-box;
-  width: 280px;
-  margin-bottom: 54px;
+  height: 38px;
 
   vertical-align: bottom;
-
-  font-size: 0;
 }
 
-.form-qty-child {
+.form-calendar-item {
+  width: 458px;
+  margin-bottom: 29px;
+}
+
+.form-qty-item {
+  margin-bottom: 54px;
+}
+
+.qty-adults {
+  width: 226px;
+  margin-right: 52px;
+}
+
+.qty-kids {
   width: 180px;
+  margin-right: 0;
 }
 
-label.form-calendar-item,
-label.form-qty-item {
-  width: 109px;
-
-  text-transform: uppercase;
-
-  font-size: 14px;
+.form-calendar-input {
+    background-color: #f2f2f2;
 }
 
-label.form-qty-item {
-  width: 116px;
+.form-calendar-input:hover {
+    background-color: #ebebeb;
 }
 
-input.form-calendar-item,
-input.form-qty-item {
-  width: 308px;
+
+.form-calendar-item input,
+.form-calendar-item button,
+.form-qty-item input,
+.form-qty-item button {
+  position: absolute;
+  top: 0;
+
+  display: block;
+
+  box-sizing: border-box;
+  width: 38px;
+  height: 38px;
   margin: 0;
-  padding: 0 14px;
+  padding: 0;
 
+  text-align: center;
   text-transform: uppercase;
 
   border: none;
   outline: none;
   background-color: #f2f2f2;
-
-  font-size: 14px;
 }
 
-input.form-qty-item {
-  width: 38px;
-  padding: 0;
+.form-calendar-item input {
+  right: 38px;
 
-  text-align: center;
+  width: 308px;
+  padding-left: 12px;
+
+  text-align: left;
 }
 
-span.form-calendar-item,
-span.form-qty-item {
-  width: 38px;
-  height: 38px;
-  margin-left: -4px;
+.form-calendar-item button {
+  right: 0;
 
-  text-align: center;
+  width: 38px;
 
   color: #c2c2c2;
-  outline: none;
-  background-color: #f2f2f2;
 
   font-size: 21px;
   line-height: 38px;
 }
 
-span.form-qty-item {
-/* margin-left: 0; */
+.form-qty-item input {
+  right: 38px;
+
+  width: 38px;
+  padding-left: 5px;
+}
+
+.form-qty-item button {
+  right: 0;
+
+  width: 38px;
+
   color: #a9a9a9;
 
   font-size: 14px;
+  line-height: 38px;
 }
 
-span.form-qty-item:first-child {
-  /* margin-left: 0; */
+.form-qty-item button.icon-minus {
+  right: 76px;
 }
 
-.form-qty-child {
-  /* text-align: right; */
-}
 
-.form-qty-child label {
-  width: 68px;
-}
 
 .btn-search-hotels {
   width: 458px;
@@ -616,6 +625,8 @@ span.form-qty-item:first-child {
   font-size: 21px;
   font-weight: bold;
 }
+/* -= форма поиска отелей на главной =- КОНЕЦ */
+
 
 
 /*==== Карта ===*/
@@ -1148,7 +1159,7 @@ a.sorting-active, a.sorting-active:active, a.sorting-active:hover {
   width: 33.34%;
 }
 
-.footer-tag {
+.footer-item-tag {
   padding-top: 46px;
 
   font-size: 21px;
@@ -1156,7 +1167,7 @@ a.sorting-active, a.sorting-active:active, a.sorting-active:hover {
   line-height: 26px;
 }
 
-.footer-social {
+.footer-item-social {
   padding-top: 36px;
 }
 
@@ -1198,11 +1209,11 @@ a.sorting-active, a.sorting-active:active, a.sorting-active:hover {
   color: rgba(255, 255, 255, .3);
 }
 
-.footer-copyright {
+.footer-item-copyright {
   padding-top: 41px;
 }
 
-.footer-copyright span {
+.footer-item-copyright span {
   margin: 0 2px;
 }
 

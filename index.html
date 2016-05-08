@@ -122,35 +122,38 @@
       </p>
       <div class="search-form">
         <a href="#" class="btn brown-btn search-form-open">Поиск гостиницы в седоне</a>
+
+        <!-- Форма поиска отелей -->
         <form class="modal-content" action="https://echo.htmlacademy.ru" method="post">
-          <div class="form-calendar">
-            <label class="form-calendar-item" for="date-in">Дата заезда:</label>
-            <input class="form-calendar-item" type="text" name="date-in" value="24 апреля 2016" id="date-in">
-            <span class="form-calendar-item icon-calendar"></span>
-          </div>
+          <label class="form-calendar-item" for="date-in">Дата заезда:
+            <div class="form-calendar-input">
+              <input type="text" name="date-in" value="24 апреля 2016" id="date-in">
+              <button class="btn icon-calendar"></button>
+            </div>
+          </label>
+          <label class="form-calendar-item" for="date-out">Дата выезда:
+            <input type="text" name="date-out" value="4 июля 2016" id="date-out">
+            <button class="btn icon-calendar"></button>
+          </label>
 
-          <div class="form-calendar">
-            <label class="form-calendar-item" for="date-out">Дата выезда:</label>
-            <input class="form-calendar-item" type="text" name="date-out" value="4 июля 2016" id="date-out">
-            <span class="form-calendar-item icon-calendar"></span>
-          </div>
-
-          <div class="form-qty form-qty-adult">
-            <label class="form-qty-item" for="adults">Взрослые:</label>
-            <span class="form-qty-item icon-minus"></span>
-            <input class="form-qty-item" id="adults" type="text" name="adults" value="2" size="2">
-            <span class="form-qty-item icon-plus"></span>
-          </div>
-
-          <div class="form-qty form-qty-child">
-            <label class="form-qty-item" for="adults">Дети:</label>
-            <span class="form-qty-item icon-minus"></span>
-            <input class="form-qty-item" id="kids" type="text" name="kids" value="0" size="2">
-            <span class="form-qty-item icon-plus"></span>
-          </div>
+          <label class="form-qty-item qty-adults" for="adults">Взрослые:
+            <div class="form-calendar-input">
+              <button class="btn icon-minus"></button>
+              <input id="adults" type="text" name="adults" value="2" size="1">
+              <button class="btn icon-plus"></button>
+            </div>
+          </label>
+          <label class="form-qty-item qty-kids" for="kids">Дети:
+            <div class="form-calendar-input">
+              <button class="btn icon-minus"></button>
+              <input id="kids" type="text" name="kids" value="0" size="1">
+              <button class="btn icon-plus"></button>
+            </div>
+          </label>
 
           <button class="btn blue-btn btn-search-hotels" type="submit">Найти</button>
         </form>
+        <!-- Конец формы поиска отелей -->
       </div>
     </div>
 
@@ -162,17 +165,17 @@
   </main>
 
   <footer class="main-footer container clearfix">
-    <section class="footer-item footer-tag">
+    <section class="footer-item footer-item-tag">
       <a href="#">#visitsedona</a>
     </section>
 
-    <section class="footer-item footer-social">
+    <section class="footer-item footer-item-social">
       <a class="btn blue-btn social-btn" href="#">Twitter<span class="icon-social icon-twitter"></span></a>
       <a class="btn blue-btn social-btn" href="#">Facebook<span class="icon-social icon-facebook"></span></a>
       <a class="btn blue-btn social-btn" href="#">Youtube<span class="icon-social icon-youtube"></span></a>
     </section>
 
-    <section class="footer-item footer-copyright">
+    <section class="footer-item footer-item-copyright">
       <span>Website by</span>
       <a href="http://www.htmlacademy.ru"><span class="sprite-htmlacademy"></span></a>
     </section>
