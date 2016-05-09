@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Седона</title>
-  <link href='https://fonts.googleapis.com/css?family=PT+Sans:400,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+  <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&subset=latin,cyrillic" rel="stylesheet" type="text/css">
   <link href="css/normalize.css" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
 </head>
@@ -14,21 +14,21 @@
     <nav class="top-menu">
       <ul>
         <li class="top-menu-left">
-          <a href="#">Информация</a>
+          <a href="info.html">Информация</a>
         </li>
         <li class="top-menu-left">
-          <a href="#">Фото и видео</a>
+          <a href="media.html">Фото и видео</a>
         </li>
         <li class="top-menu-right">
           <a href="hotels.html">Гостиницы</a>
         </li>
         <li class="top-menu-right">
-          <a href="#">Карта штата</a>
+          <a href="map.html">Карта штата</a>
         </li>
       </ul>
     </nav>
     <div class="logo">
-      <a href="/"><img src="img/logo.png" width="138" height="70" alt="Седона"></a>
+      <a href="index.html"><img src="img/logo.png" width="138" height="70" alt="Седона"></a>
     </div>
   </header>
 
@@ -44,8 +44,8 @@
       <p>Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</p>
     </div>
     <section class="features">
-      <div class="features-item clearfix">
-        <div class="item-description item-left">
+      <div class="features-item features-item-left features-image-right clearfix">
+        <div class="item-description">
           <h2 class="features-name">
             Настоящий<br>
             городок
@@ -53,10 +53,9 @@
           <p>— №1 —</p>
           <p>Седона - не аттракцион для туристов, там течет своя жизнь</p>
         </div>
-        <div class="features-image image-right"></div>
       </div>
 
-      <div class="features-item clearfix">
+      <div class="features-item features-item-advice clearfix">
         <div class="item-advice">
           <img src="img/motel.png" width="75" height="72" alt="Motel">
           <h2 class="advice-name">Жилье</h2>
@@ -74,8 +73,8 @@
         </div>
       </div>
 
-      <div class="features-item clearfix">
-        <div class="item-description item-right">
+      <div class="features-item features-item-right features-image-left clearfix">
+        <div class="item-description">
           <h2 class="features-name">
             Там есть<br>
             Мост дьявола
@@ -83,7 +82,6 @@
           <p>— №2 —</p>
           <p>Да, по нему можно пройти! Если конечно вы осмелитесь</p>
         </div>
-        <div class="features-image image-left"></div>
       </div>
 
       <div class="features-item feature-bg-gray clearfix">
@@ -121,34 +119,28 @@
         <br> и мы покажем вам лучшие предложения гостиниц в Седоне
       </p>
       <div class="search-form">
-        <a href="#" class="btn brown-btn search-form-open">Поиск гостиницы в седоне</a>
+        <a href="form.html" class="btn brown-btn search-form-open">Поиск гостиницы в седоне</a>
 
         <!-- Форма поиска отелей -->
         <form class="modal-content" action="https://echo.htmlacademy.ru" method="post">
           <label class="form-calendar-item" for="date-in">Дата заезда:
-            <div class="form-calendar-input">
-              <input type="text" name="date-in" placeholder="24 апреля 2016" id="date-in">
-              <button class="btn icon-calendar"></button>
-            </div>
-          </label>
+            <input type="text" name="date-in" placeholder="24 апреля 2016" id="date-in">
+            <button class="btn icon-calendar"></button>
+            </label>
           <label class="form-calendar-item" for="date-out">Дата выезда:
             <input type="text" name="date-out" placeholder="4 июля 2016" id="date-out">
             <button class="btn icon-calendar"></button>
           </label>
 
           <label class="form-qty-item qty-adults" for="adults">Взрослые:
-            <div class="form-qty-input">
-              <button class="btn icon-minus"></button>
-              <input id="adults" type="text" name="adults" value="2" size="1">
-              <button class="btn icon-plus"></button>
-            </div>
+            <input id="adults" type="text" name="adults" placeholder="2" size="1">
+            <button class="btn icon-minus"></button>
+            <button class="btn icon-plus"></button>
           </label>
           <label class="form-qty-item qty-kids" for="kids">Дети:
-            <div class="form-qty-input">
-              <button class="btn icon-minus"></button>
-              <input id="kids" type="text" name="kids" value="0" size="1">
-              <button class="btn icon-plus"></button>
-            </div>
+            <input id="kids" type="text" name="kids" placeholder="0" size="1">
+            <button class="btn icon-minus"></button>
+            <button class="btn icon-plus"></button>
           </label>
 
           <button class="btn blue-btn btn-search-hotels" type="submit">Найти</button>
@@ -157,9 +149,7 @@
       </div>
     </div>
 
-    <div class="map">
-      <iframe src="https://www.google.com/maps/embed?pb=!1m23!1m12!1m3!1d1000539.25509417!2d-112.07806899777074!3d34.54031266889378!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m8!3e6!4m0!4m5!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2z0KHQtdC00L7QvdCwIFNlZG9uYQ!3m2!1d34.8697395!2d-111.7609896!5e0!3m2!1sru!2sru!4v1462559302395"
-          frameborder="0" width="100%" height="100%" style="border:0" allowfullscreen></iframe>
+    <div class="map" id="map">
     </div>
 
   </main>
@@ -180,16 +170,10 @@
       <a href="http://www.htmlacademy.ru"><span class="sprite-htmlacademy"></span></a>
     </section>
   </footer>
-
-  <script>
-    var link = document.querySelector(".search-form-open");
-    var popup = document.querySelector(".modal-content");
-
-    link.addEventListener("click", function(event) {
-      event.preventDefault();
-      popup.classList.add("modal-content-show");
-    });
-  </script>
+  
+  <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+  <script src="js/map.js"></script>
+  <script src="js/popup.js"></script>
 </body>
 
 </html>
