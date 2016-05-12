@@ -1266,7 +1266,7 @@ a.sorting-active, a.sorting-active:active, a.sorting-active:hover {
   padding-top: 36px;
 }
 
-.icon-social {
+.footer-icon-social {
   color: #fff;
 
   font-size: 19px;
@@ -1274,7 +1274,7 @@ a.sorting-active, a.sorting-active:active, a.sorting-active:hover {
   line-height: 48px;
 }
 
-.icon-social:last-child {
+.footer-icon-social:last-child {
   font-size: 23px;
 }
 
