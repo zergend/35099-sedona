@@ -343,14 +343,14 @@ li.top-menu-right {
 .features-item-left .item-description {
   float: left;
 
-  width: 33%;
+  width: 34%;
 
-  background-color: #87aece;
+  background-color: #81b4d3;
 }
 
 .features-image-right {
-  background: #87aece url("../img/features-img-right.jpg") no-repeat 100% 50%;
-  background-size: 67%;
+  background: #81b4d3 url("../img/features-img-right.jpg") no-repeat 100% 53%;
+  background-size: 66%;
 }
 
 .features-item-advice {
@@ -386,18 +386,18 @@ li.top-menu-right {
 }
 
 .features-image-left {
-  background: #87aece url("../img/features-img-left.jpg") no-repeat 0 50%;
-  background-size: 67%;
+  background: #81b4d3 url("../img/features-img-left.jpg") no-repeat 0 53%;
+  background-size: 66%;
 }
 
 .features-item-right{
-  background-color: #87aece;
+  background-color: #81b4d3;
 }
 
 .features-item-right .item-description {
   float: right;
 
-  width: 33.33%;
+  width: 34%;
 
   background-color: #87aece;
 }
