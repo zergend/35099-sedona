@@ -582,14 +582,6 @@ li.top-menu-right {
   color:#000;
 }
 
-.price-input::-input-placeholder {
-    opacity:1;
-
-    color:#fff;
-  }
-
-
-
 /* -= форма поиска отелей на главной =- НАЧАЛО */
 .form-calendar-item,
 .form-qty-item {
