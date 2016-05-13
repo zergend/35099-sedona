@@ -5,8 +5,8 @@
   <meta charset="utf-8">
   <title>Поиск гостиницы в Седоне</title>
   <link href='https://fonts.googleapis.com/css?family=PT+Sans:400,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
-  <link href="css/normalize.css" rel="stylesheet">
-  <link href="css/style.css" rel="stylesheet">
+  <link href="css/normalize.min.css" rel="stylesheet">
+  <link href="css/style.min.css" rel="stylesheet">
 </head>
 
 <body>
@@ -14,21 +14,21 @@
     <nav class="top-menu">
       <ul>
         <li class="top-menu-left">
-          <a href="#">Информация</a>
+          <a href="info.html">Информация</a>
         </li>
         <li class="top-menu-left">
-          <a href="#">Фото и видео</a>
+          <a href="media.html">Фото и видео</a>
         </li>
         <li class="top-menu-right">
-          <a href="hotels.html">Гостиницы</a>
+          <a class="active" href="hotels.html">Гостиницы</a>
         </li>
         <li class="top-menu-right">
-          <a href="#">Карта штата</a>
+          <a href="map.html">Карта штата</a>
         </li>
       </ul>
     </nav>
     <div class="logo">
-      <a href="/"><img src="img/logo.png" width="138" height="70" alt="Седона"></a>
+      <a href="index.html"><img src="img/logo.png" width="138" height="70" alt="Седона"></a>
     </div>
   </header>
 
@@ -72,24 +72,27 @@
         </div>
 
         <div class="filter-range">
-          <p>Стоимость в сутки (р):</p>
+          <div class="filter-range-title">Стоимость в сутки (р):</div>
+
+          <div class="price-controls">
+            <label class="min-price">от
+              <input class="price-input" type="text" name="min-price" value="0">
+            </label>
+            <label class="max-price">до
+              <input class="price-input" type="text" name="max-price" value="3000">
+            </label>
+          </div>
+
           <div class="range-controls">
             <div class="scale">
               <div class="bar"></div>
             </div>
-            <div class="toggle min-toggle">
-
-            </div>
-            <div class="toggle max-toggle">
-
-            </div>
+            <div class="range-toggle range-toggle-min"></div>
+            <div class="range-toggle range-toggle-max"></div>
           </div>
-          <div class="price-controls">
-            от
-            <input type="text" class="min-price" name="min-price" id="min-price" value="0"> до
-            <input type="text" class="max-price" name="max-price" id="max-price" value="3 000">
-          </div>
-          <button class="btn blue-btn" type="submit">Показать</button>
+          <button class="btn-transparent" type="submit">Показать</button>
+
+
         </div>
       </form>
     </div>
@@ -99,13 +102,13 @@
         <div class="results-sort-variants">
           <b class="result-count">Найдено: 3</b>
           <span class="sorting">Сортировка:</span>
-          <a class="sorting sorting-variant sorting-active">по цене</a>
-          <a class="sorting sorting-variant">по типу</a>
-          <a class="sorting sorting-variant">по рейтингу</a>
+          <a class="sorting sorting-variant sorting-active" href="#">по цене</a>
+          <a class="sorting sorting-variant" href="#">по типу</a>
+          <a class="sorting sorting-variant" href="#">по рейтингу</a>
         </div>
-        <div class="sorting-up-down">
-          <a class="up active"></a>
-          <a class="down"></a>
+        <div class="result-sort-up-down">
+          <a class="sort-up-down" href="#"><span class="icon-up-dir"></span></a>
+          <a class="sort-up-down" href="#"><span class="icon-down-dir active"></span></a>
         </div>
       </div>
 
@@ -116,18 +119,21 @@
           </div>
 
           <div class="hotel-description">
-            <b class="hotel-name">Amara Resort & SPA</b>
-            <p><span class="hotel-type"></span>Гостиница<span class="hotel-price">от 3 500 р.</span></p>
+            <h3 class="hotel-name"><a href="#">Amara Resort & SPA</a></h3>
+            <p><span class="hotel-type">Гостиница</span><span class="hotel-price">от 3 500 р.</span></p>
             <a href="#" class="btn blue-btn">Подробнее</a>
             <a href="#" class="btn brown-btn">Забронировать</a>
           </div>
 
           <div class="result-rating">
             <div class="rating-stars">
-              <span></span><span></span><span></span><span></span>
+              <span class="icon-star"></span>
+              <span class="icon-star"></span>
+              <span class="icon-star"></span>
+              <span class="icon-star"></span>
             </div>
-            <div class="rating-number">
-              Рейтинг: 8.5
+            <div class="btn rating-number">
+              <span>Рейтинг: 8.5</span>
             </div>
           </div>
         </div>
@@ -138,18 +144,19 @@
           </div>
 
           <div class="hotel-description">
-            <b class="hotel-name">Desert Quail Inn</b>
-            <p><span class="hotel-type"></span>Мотель<span class="hotel-price">от 2 000 р.</span></p>
+            <h3 class="hotel-name"><a href="#">Desert Quail Inn</a></h3>
+            <p><span class="hotel-type">Мотель</span><span class="hotel-price">от 2 000 р.</span></p>
             <a href="#" class="btn blue-btn">Подробнее</a>
             <a href="#" class="btn brown-btn">Забронировать</a>
           </div>
 
           <div class="result-rating">
             <div class="rating-stars">
-              <span></span><span></span>
+              <span class="icon-star"></span>
+              <span class="icon-star"></span>
             </div>
-            <div class="rating-number">
-              Рейтинг: 8.9
+            <div class="btn rating-number">
+              <span>Рейтинг: 8.9</span>
             </div>
           </div>
         </div>
@@ -160,18 +167,20 @@
           </div>
 
           <div class="hotel-description">
-            <b class="hotel-name">Villas At Poco Diablo</b>
-            <p><span class="hotel-type"></span>Апартаменты<span class="hotel-price">от 4 000 р.</span></p>
+            <h3 class="hotel-name"><a href="#">Villas At Poco Diablo</a></h3>
+            <p><span class="hotel-type">Апартаменты</span><span class="hotel-price">от 4 000 р.</span></p>
             <a href="#" class="btn blue-btn">Подробнее</a>
             <a href="#" class="btn brown-btn">Забронировать</a>
           </div>
 
           <div class="result-rating">
             <div class="rating-stars">
-              <span></span><span></span><span></span>
+              <span class="icon-star"></span>
+              <span class="icon-star"></span>
+              <span class="icon-star"></span>
             </div>
-            <div class="rating-number">
-              Рейтинг: 9.2
+            <div class="btn rating-number">
+              <span>Рейтинг: 9.2</span>
             </div>
           </div>
         </div>
@@ -180,22 +189,20 @@
     </div>
   </main>
 
-  <footer class="main-footer container clearfix">
-    <section class="footer-item footer-tag">
+  <footer class="main-footer hotel-footer container clearfix">
+    <section class="footer-item footer-item-tag">
       <a href="#">#visitsedona</a>
     </section>
 
-    <section class="footer-item footer-social">
-      <a class="social-btn social-btn-twitter" href="#">Твиттер</a>
-      <a class="social-btn social-btn-fb" href="#">Фейсбук</a>
-      <a class="social-btn social-btn-youtube" href="#">Youtube</a>
+    <section class="footer-item footer-item-social">
+      <a class="btn blue-btn social-btn" href="#">Twitter<span class="footer-icon-social icon-twitter"></span></a>
+      <a class="btn blue-btn social-btn" href="#">Facebook<span class="footer-icon-social icon-facebook"></span></a>
+      <a class="btn blue-btn social-btn" href="#">Youtube<span class="footer-icon-social icon-youtube"></span></a>
     </section>
 
-    <section class="footer-item footer-copyright">
-      Website by
-      <a href="http://www.htmlacademy.ru">
-        <i class="sprite-htmlacademy sprite-htmlacademy-normal"></i>
-      </a>
+    <section class="footer-item footer-item-copyright">
+      <span>Website by</span>
+      <a href="http://www.htmlacademy.ru"><span class="sprite-htmlacademy"></span></a>
     </section>
   </footer>
 
