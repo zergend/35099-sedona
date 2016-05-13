@@ -5,8 +5,8 @@
   <meta charset="utf-8">
   <title>HTML Academy: Седона</title>
   <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&subset=latin,cyrillic" rel="stylesheet" type="text/css">
-  <link href="css/normalize.css" rel="stylesheet">
-  <link href="css/style.css" rel="stylesheet">
+  <link href="css/normalize.min.css" rel="stylesheet">
+  <link href="css/style.min.css" rel="stylesheet">
 </head>
 
 <body>
@@ -123,25 +123,28 @@
 
         <!-- Форма поиска отелей -->
         <form class="modal-content" action="https://echo.htmlacademy.ru" method="post">
-          <label class="form-calendar-item" for="date-in">Дата заезда:
+          <div class="form-calendar-item">
+            <label for="date-in">Дата заезда:</label>
             <input type="text" name="date-in" placeholder="24 апреля 2016" id="date-in">
             <button class="btn icon-calendar"></button>
-            </label>
-          <label class="form-calendar-item" for="date-out">Дата выезда:
+          </div>
+          <div class="form-calendar-item">
+            <label for="date-out">Дата выезда:</label>
             <input type="text" name="date-out" placeholder="4 июля 2016" id="date-out">
             <button class="btn icon-calendar"></button>
-          </label>
-
-          <label class="form-qty-item qty-adults" for="adults">Взрослые:
+          </div>
+          <div class="form-qty-item qty-adults">
+            <label for="adults">Взрослые:</label>
             <input id="adults" type="text" name="adults" placeholder="2" size="1">
             <button class="btn icon-minus"></button>
             <button class="btn icon-plus"></button>
-          </label>
-          <label class="form-qty-item qty-kids" for="kids">Дети:
+          </div>
+          <div class="form-qty-item qty-kids">
+          <label for="kids">Дети:</label>
             <input id="kids" type="text" name="kids" placeholder="0" size="1">
             <button class="btn icon-minus"></button>
             <button class="btn icon-plus"></button>
-          </label>
+          </div>
 
           <button class="btn blue-btn btn-search-hotels" type="submit">Найти</button>
         </form>
@@ -172,8 +175,7 @@
   </footer>
 
   <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
-  <script src="js/map.js"></script>
-  <script src="js/popup.js"></script>
+  <script src="js/sedona.min.js"></script>
 </body>
 
 </html>

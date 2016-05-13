@@ -562,21 +562,33 @@ li.top-menu-right {
   background-color: #f2f2f2;
 }
 
-.modal-content input::-webkit-input-placeholder {
+::-webkit-input-placeholder {
+  opacity:1;
   color:#000;
 }
 
-input::-moz-placeholder {
+::-moz-placeholder {
+  opacity:1;
   color:#000;
 }/* Firefox 19+ */
 
-input:-moz-placeholder {
+:-moz-placeholder {
+  opacity:1;
   color:#000;
 }/* Firefox 18- */
 
-input:-ms-input-placeholder {
+:-ms-input-placeholder {
+  opacity:1;
   color:#000;
 }
+
+.price-input::-input-placeholder {
+    opacity:1;
+
+    color:#fff;
+  }
+
+
 
 /* -= форма поиска отелей на главной =- НАЧАЛО */
 .form-calendar-item,
@@ -641,6 +653,11 @@ input:-ms-input-placeholder {
   text-align: left;
 }
 
+.form-calendar-item input,
+.form-qty-item input {
+  border: transparent solid 2px;
+}
+
 .form-calendar-item input:hover,
 .form-qty-item input:hover {
   background-color: #ebebeb;
@@ -695,6 +712,9 @@ input:-ms-input-placeholder {
 .icon-plus::before {
   color: #a9a9a9;
   background-color: transparent;
+
+  font-size: 14px;
+  line-height: 38px;
 }
 
 .icon-calendar:hover,
@@ -978,7 +998,7 @@ input[type="checkbox"]:disabled + label::before {
 
   text-align: left;
 
-  border-bottom: 1px solid #f2f2f2;
+  border-bottom: 1px solid #e5e5e5;
 }
 
 .results-sort-variants {
@@ -1087,7 +1107,7 @@ a.sorting-active, a.sorting-active:active, a.sorting-active:hover {
 
   text-align: left;
 
-  border-bottom: 1px solid #f2f2f2;
+  border-bottom: 1px solid #e5e5e5;
 }
 
 .result-hotel-item a {
@@ -1220,10 +1240,12 @@ a.sorting-active, a.sorting-active:active, a.sorting-active:hover {
 /*====== ФУТЕР =====*/
 
 .main-footer {
-  margin-top: -120px;
+  position: relative;
 
-  opacity: 0.9;
-  border-color: #fefefe;
+  margin-top: -120px;
+  /* border-color: #fefefe; */
+
+  background-color: rgba(255, 255, 255, 0.9);
 }
 
 .hotel-footer {
@@ -1287,7 +1309,6 @@ a.sorting-active, a.sorting-active:active, a.sorting-active:hover {
 
   vertical-align: middle;
 
-  opacity: 1;
   background-color: #81b3d2;
 
   font-size: 0;
