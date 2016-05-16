@@ -273,14 +273,18 @@ main {
   font-weight: bold;
 }
 
+.top-menu li:nth-child(2) {
+  padding-left: 2.8%;
+}
+
+.top-menu li:last-child {
+  padding-right: 2.8%;
+}
+
 li.top-menu-left {
   float: left;
 
   text-align: left;
-}
-
-li.top-menu-left:nth-child(2) {
-  padding-left: 2.8%;
 }
 
 li.top-menu-right {
@@ -289,14 +293,10 @@ li.top-menu-right {
   text-align: right;
 }
 
-li.top-menu-right:nth-child(1) {
-  padding-right: 2.8%;
-}
-
 .index-welcome {
-  height: 509px;
+  height: 508px;
 
-  background: url("../img/mask.png") no-repeat 50% 100% / contain, url("../img/background-photo.jpg") no-repeat 50% 0;
+  background: url("../img/mask.png") no-repeat 50% 100% / contain, url("../img/background-photo.jpg") no-repeat 50% -56px;
   background-color: #d7e5f0;
 }
 
@@ -310,11 +310,12 @@ li.top-menu-right:nth-child(1) {
   box-sizing: border-box;
   min-height: 215px;
   padding-top: 60px;
+  padding-bottom: 51px;
 }
 
 .index-lead h1 {
   margin: 0;
-  padding-bottom: 26px;
+  padding-bottom: 27px;
 }
 
 .index-lead p {
@@ -336,8 +337,8 @@ li.top-menu-right:nth-child(1) {
 }
 
 .item-description {
-  padding: 54px 40px;
-  padding-bottom: 20px;
+  padding: 54px 47px;
+  padding-bottom: 50px;
 }
 
 .features-item-left h2,
@@ -347,21 +348,26 @@ li.top-menu-right:nth-child(1) {
   color: #fff;
 }
 
-.item-description h2,
+.item-description h2 {
+  padding-bottom: 25px;
+}
+
 .item-description h2 + p {
-  padding-bottom: 23px;
+  padding-bottom: 20px;
 }
 
 .features-item-left .item-description {
   float: left;
 
   width: 33.33%;
+  padding-right: 58px;
+  padding-left: 58px;
 
-  background-color: #81b4d3;
+  background-color: #87aece;
 }
 
 .features-image-right {
-  background: #81b4d3 url("../img/features-img-right.jpg") no-repeat 100% 53%;
+  background: #87aece url("../img/features-img-right.jpg") no-repeat 100% 53.5%;
   background-size: 66.67%;
 }
 
@@ -380,13 +386,15 @@ li.top-menu-right:nth-child(1) {
 
 .item-advice:last-child {
   float: right;
+  /* width: 33%; */
 
-  width: 33%;
   padding-top: 56px;
 }
 
 .item-advice:nth-child(2) {
   padding-top: 62px;
+  padding-right: 55px;
+  padding-left: 55px;
 }
 
 .item-advice img {
@@ -398,12 +406,8 @@ li.top-menu-right:nth-child(1) {
 }
 
 .features-image-left {
-  background: #81b4d3 url("../img/features-img-left.jpg") no-repeat 0 53%;
+  background: #87aece url("../img/features-img-left.jpg") no-repeat 0 53%;
   background-size: 66.67%;
-}
-
-.features-item-right{
-  background-color: #81b4d3;
 }
 
 .features-item-right .item-description {
@@ -424,8 +428,9 @@ li.top-menu-right:nth-child(1) {
   box-sizing: border-box;
   width: 33.33%;
   min-height: 256px;
-  padding-top: 48px;
-  padding-bottom: 40px;
+  padding: 48px 60px;
+  padding-bottom: 37px;
+
 }
 
 .feature-bg-gray .item-description:last-child {
@@ -481,9 +486,10 @@ li.top-menu-right:nth-child(1) {
 
   box-sizing: border-box;
   width: 568px;
-  height: 86px;
+  min-height: 86px;
   margin-left: -284px;
   padding-top: 30px;
+  padding-bottom: 30px;
 
   font-size: 21px;
   font-weight: bold;
@@ -557,6 +563,8 @@ li.top-menu-right:nth-child(1) {
 
   display: block;
 
+  -webkit-animation: form_occurrence 0.6s;
+  -o-animation: form_occurrence 0.6s;
   animation: form_occurrence 0.6s;
 }
 
@@ -869,11 +877,10 @@ input[type="checkbox"]:disabled + label::before {
 .filter-range {
   float: right;
   /* width: 330px; */
-  width: 33%;
 
+  width: 33%;
   min-width: 218px;
   max-width: 318px;
-
 
   color: #fff;
 }
@@ -907,6 +914,10 @@ input[type="checkbox"]:disabled + label::before {
   height: 22px;
 
   content: "";
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 
   background: #fff;
@@ -1377,4 +1388,38 @@ a.sorting-active:hover {
 
 .sprite-htmlacademy:active {
   background-position: -5px -103px;
+}
+
+/* Медиазапросы */
+
+@media all and (max-width: 768px) {
+  .index-welcome {
+    background: url("../img/mask.png") no-repeat 50% 100% / contain,
+    url("../img/background-photo.jpg") no-repeat 50% 50% / cover;
+  }
+
+  .features-item-left .item-description {
+      padding: 47px 40px;
+      padding-bottom: 36px;
+  }
+
+  .features-item-right .item-description {
+      padding: 47px 40px;
+      padding-bottom: 36px;
+  }
+
+  .item-advice:nth-child(2) {
+    padding-right: 50px;
+    padding-left: 50px;
+  }
+
+  .feature-bg-gray .item-description {
+    padding-right: 50px;
+    padding-left: 50px;
+  }
+
+  .feature-bg-gray .item-description:nth-child(2) {
+    padding-right: 60px;
+    padding-left: 60px;
+  }
 }
