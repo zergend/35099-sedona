@@ -296,7 +296,7 @@ li.top-menu-right:nth-child(1) {
 .index-welcome {
   height: 509px;
 
-  background: url("../img/mask.png") no-repeat 50% 100%, url("../img/background-photo.jpg") no-repeat 50% -55px;
+  background: url("../img/mask.png") no-repeat 50% 100% / contain, url("../img/background-photo.jpg") no-repeat 50% 0;
   background-color: #d7e5f0;
 }
 
@@ -847,26 +847,33 @@ input[type="checkbox"]:disabled + label::before {
 .filter-item {
   float: left;
 
-  width: 200px;
-  margin-right: 55px;
+  width: 25%;
+  /* margin-right: 5.21%; */
+}
+
+.filter-item:nth-child(1) {
+  min-width: 240px;
+  max-width: 255px;
+  /* margin-right: 0; */
 }
 
 .filter-item:nth-child(2) {
-  margin-right: 0;
+  width: 200px;
+  /* margin-right: 0; */
 }
 
-.filter-range {
-  float: right;
-
-  width: 30%;
-}
 /*=== -= КОНЕЦ фильтр отелей =- ===*/
 
 
 /*=== -= НАЧАЛО фильтр цены =- ===*/
 .filter-range {
+  float: right;
   /* width: 330px; */
-  width: 30.30%;
+  width: 33%;
+
+  min-width: 218px;
+  max-width: 318px;
+
 
   color: #fff;
 }
@@ -980,7 +987,7 @@ input[type="checkbox"]:disabled + label::before {
 }
 
 .range-toggle-max {
-  left: 80%;
+  right: 44px;
 }
 
 .btn-transparent {
@@ -1121,7 +1128,7 @@ a.sorting-active:hover {
 .result-hotel-item {
   box-sizing: border-box;
   min-height: 151px;
-  padding: 30px 6% 0;
+  padding: 30px 6%;
 
   text-align: left;
 
